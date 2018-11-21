@@ -34,6 +34,7 @@ class UsersController < ApplicationController
       redirect to '/login'
     elsif @user
       session[:user_id] = @user.id
+      redirect to '/tweets'
     end
     redirect to '/tweets'
   end
