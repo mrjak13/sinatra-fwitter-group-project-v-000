@@ -22,10 +22,13 @@ class UsersController < ApplicationController
   end
 
   post '/login' do
+    @user = User.find_by(username: params[:username], password: params[:password])
     if params[:username] == "" || params[:password] == ""
       redirect to '/login'
-    else
+    elsif @user
+      session[:user_id] = @user.id
     end
+    binding.pry
     redirect to '/tweets'
   end
 end
