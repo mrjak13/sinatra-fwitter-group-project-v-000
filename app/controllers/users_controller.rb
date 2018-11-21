@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
     end
     binding.pry
-    erb '/tweets'
+    erb :'/tweets'
   end
 
   get '/login' do
