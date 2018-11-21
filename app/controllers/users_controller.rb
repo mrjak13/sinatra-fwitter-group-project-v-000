@@ -15,7 +15,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
     end
     binding.pry
-    redirect to "/tweets"
+    redirect to '/tweets'
   end
 
   get '/login' do
