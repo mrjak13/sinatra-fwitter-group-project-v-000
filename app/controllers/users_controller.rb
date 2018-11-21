@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     else
     erb :'/users/signup'
     end
+    redirect to '/tweets'
   end
 
   post '/signup' do
