@@ -22,9 +22,10 @@ class UsersController < ApplicationController
   end
 
   post '/users/login' do
+    binding.pry
     if params[:username] == "" || params[:password] == ""
       redirect to '/users/login'
-    else
+    elsif params[:username]
     end
     redirect to '/tweets'
   end
