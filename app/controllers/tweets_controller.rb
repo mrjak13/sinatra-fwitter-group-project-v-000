@@ -44,7 +44,7 @@ class TweetsController < ApplicationController
       @tweet = Tweet.find(params[:id])
       erb :'/tweets/edit'
     else
-      redirect to '/login'      
+      redirect to '/login'
     end
   end
 
@@ -59,9 +59,10 @@ class TweetsController < ApplicationController
   end
 
   delete '/tweets/:id' do
+    
     @tweet = Tweet.find(params[:id])
     @tweet.delete
-
+    binding.pry
     redirect to '/tweets'
   end
 
