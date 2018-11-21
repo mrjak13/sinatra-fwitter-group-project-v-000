@@ -42,7 +42,7 @@ class TweetsController < ApplicationController
     @tweet = Tweet.find(params[:id])
     @tweet.delete
 
-    redirect to 'tweets/index'
+    redirect to '/tweets'
   end
 
 end
