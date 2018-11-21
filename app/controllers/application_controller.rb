@@ -26,6 +26,7 @@ class ApplicationController < Sinatra::Base
     else
       binding.pry
       @user = User.create(username: params[:username], email: params[:email], password: params[:password])
+      session[:id] = @user.id
     end
     redirect to '/tweets'
   end
