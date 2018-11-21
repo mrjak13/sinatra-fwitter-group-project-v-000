@@ -22,10 +22,10 @@ class TweetsController < ApplicationController
       else
         @tweet = Tweet.create(content: params[:content])
         @tweet.user_id = current_user.id
-        binding.pry
       end
-      redirect to "/tweets/#{@tweet.id}"
     end
+    binding.pry
+    redirect to "/tweets/#{@tweet.id}"
   end
 
   get '/tweets/:id' do
