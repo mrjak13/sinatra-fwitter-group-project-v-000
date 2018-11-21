@@ -48,7 +48,7 @@ class TweetsController < ApplicationController
 
     @tweet = Tweet.find(params[:id])
     if params[:content] == ""
-      redirect to "/tweets/#{@tweet.id}"
+      redirect to "/tweets/#{@tweet.id}/edit"
     else
     @tweet.update(content: params[:content])
     end
