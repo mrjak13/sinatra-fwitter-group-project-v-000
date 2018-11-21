@@ -24,8 +24,8 @@ class TweetsController < ApplicationController
         @tweet.user_id = current_user.id
       end
     end
-    binding.pry
     redirect to "/tweets/#{@tweet.id}"
+    binding.pry
   end
 
   get '/tweets/:id' do
