@@ -9,3 +9,11 @@
 <a href="/tweets/<%= tweet.id %>"><%= "#{tweet.id}" %></a>
 <%= "#{tweet.content}" %>
 <% end %>
+
+<% if logged_in? != true %>
+  <a href="/signup">Sign up</a>
+  <a href="/login">Log in</a>
+<% else %>
+  <br></br>
+  <a href="/logout">Log out</a>
+<% end %>
