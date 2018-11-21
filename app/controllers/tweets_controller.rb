@@ -44,7 +44,7 @@ class TweetsController < ApplicationController
     erb :'/tweets/edit'
   end
 
-  patch '/tweets/:id/edit' do
+  patch '/tweets/:id' do
 
     @tweet = Tweet.find(params[:id])
     if params[:content] == ""
