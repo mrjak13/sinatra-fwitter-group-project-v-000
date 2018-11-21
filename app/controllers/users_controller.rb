@@ -3,7 +3,7 @@ class UsersController < ApplicationController
   # get '/users/signup' do
   #   erb :'/users/signup'
   # end
-  # 
+  #
   # post '/users/signup' do
   #   if params[:username] == "" || params[:email] == "" || params[:password] == ""
   #     redirect to '/users/signup'
@@ -16,11 +16,11 @@ class UsersController < ApplicationController
   #   end
   #   redirect to '/tweets'
   # end
-  # 
+  #
   # get '/users/login' do
   #   erb :'/users/login'
   # end
-  # 
+  #
   # post '/users/login' do
   #   binding.pry
   #   if params[:username] == "" || params[:password] == ""
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   #   end
   #   redirect to '/tweets'
   # end
-  # 
+  #
   # get '/users/logout' do
   #   session.clear
   # end
