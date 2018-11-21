@@ -12,8 +12,7 @@ class UsersController < ApplicationController
       redirect to '/login'
     else
       @user = User.create(username: params[:username], email: params[:email], password: params[:password])
-      session[:user_id] = @user.id
-      erb :'/tweets'
+      session[:user_id] = @user.id      
     end
     binding.pry
     erb :'/tweets'
