@@ -45,4 +45,8 @@ class UsersController < ApplicationController
     end
     redirect "/"
   end
+
+  get '/users/:slug' do
+    binding.pry
+  end
 end
