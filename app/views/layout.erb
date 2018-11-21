@@ -12,6 +12,13 @@
 
       <%= yield %>
 
+      <% if logged_in? != true %>
+        <a href="/signup">Sign up</a>
+
+        <a href="/login">Log in</a>
+      <% end %>
+
+
     </div>
 
   </body>
