@@ -16,12 +16,14 @@ class TweetsController < ApplicationController
   end
 
   post '/tweets' do
-    if params[:content] == ""
-      redirect to '/tweets/new'
-    else
-      @tweet = Tweet.create(content: params[:content])
+    if logged_in?
+      if params[:content] == ""
+        redirect to '/tweets/new'
+      else
+        @tweet = Tweet.create(content: params[:content])
+      end
+      redirect to "/tweets/#{@tweet.id}"
     end
-    redirect to "/tweets/#{@tweet.id}"
   end
 
   get '/tweets/:id' do
