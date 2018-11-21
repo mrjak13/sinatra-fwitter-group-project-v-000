@@ -5,6 +5,7 @@ ALL Tweets go here!
 <br>
 
 <% @tweets.each do |tweet| %>
+<br>
 <a href="/tweets/<%= tweet.id %>"><%= "#{tweet.id}" %></a>
 <%= "#{tweet.content}" %>
 <% end %>
