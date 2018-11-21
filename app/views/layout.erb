@@ -10,9 +10,14 @@
       <h2>This is located in layout.erb!</h2>
       <h2>Don't forget to <strong>yield</strong> your views!</h2>
 
-      <%= yield %>
+      <br>
 
       <a href="/tweets">Tweets</a>
+
+      <br>
+
+      <%= yield %>
+
 
       <% if logged_in? != true %>
         <a href="/signup">Sign up</a>
