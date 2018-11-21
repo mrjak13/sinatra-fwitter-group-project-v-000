@@ -59,7 +59,7 @@ class TweetsController < ApplicationController
   end
 
   delete '/tweets/:id' do
-    
+
     @tweet = Tweet.find(params[:id])
     @tweet.delete
     binding.pry
