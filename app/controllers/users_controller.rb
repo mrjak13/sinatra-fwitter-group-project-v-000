@@ -15,8 +15,9 @@ class UsersController < ApplicationController
       redirect to '/login'
     else
       @user = User.create(username: params[:username], email: params[:email], password: params[:password])
-      session[:user_id] = @user.id
-      redirect :'/tweets'
+      # session[:user_id] = @user.id
+      # redirect :'/tweets'
+      erb :'/login'
     end
   end
 
