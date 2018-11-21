@@ -13,11 +13,11 @@ class ApplicationController < Sinatra::Base
     erb :index
   end
 
-  get '/users/signup' do
+  get '/signup' do
     erb :'/users/signup'
   end
-
-  post '/users/signup' do
+  
+  post '/signup' do
     if params[:username] == "" || params[:email] == "" || params[:password] == ""
       redirect to '/signup'
     elsif User.find_by(username: params[:username])
@@ -29,11 +29,11 @@ class ApplicationController < Sinatra::Base
     end
     redirect to '/tweets'
   end
-
+  
   get '/login' do
     erb :'/login'
   end
-
+  
   post '/login' do
     if params[:username] == "" || params[:password] == ""
       redirect to '/login'
