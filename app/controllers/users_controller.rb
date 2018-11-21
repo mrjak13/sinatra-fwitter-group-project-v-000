@@ -18,12 +18,12 @@ class UsersController < ApplicationController
   end
 
   get '/users/login' do
-    erb :'/login'
+    erb :'/users/login'
   end
 
   post '/users/login' do
     if params[:username] == "" || params[:password] == ""
-      redirect to '/login'
+      redirect to '/users/login'
     else
     end
     redirect to '/tweets'
@@ -32,6 +32,5 @@ class UsersController < ApplicationController
   get '/users/logout' do
     session.clear
   end
-
 
 end
