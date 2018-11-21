@@ -1,5 +1,7 @@
 <h1>Home Page</h1>
 
-<a href="/users/signup">Sign up</a>
+<% if logged_in? %>
+  <a href="/users/signup">Sign up</a>
 
-<a href="/users/login">Log in</a>
+  <a href="/users/login">Log in</a>
+<% end %>
