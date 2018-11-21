@@ -30,4 +30,9 @@ class UsersController < ApplicationController
     end
     redirect to '/tweets'
   end
+
+  get '/logout' do
+    session.clear
+    redirect to '/'
+  end
 end
