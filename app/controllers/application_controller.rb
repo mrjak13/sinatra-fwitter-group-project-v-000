@@ -47,7 +47,7 @@ class ApplicationController < Sinatra::Base
   end
 
   def logged_in?
-    
+
   end
 
 end
