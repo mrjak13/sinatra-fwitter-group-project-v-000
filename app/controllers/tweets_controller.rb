@@ -25,7 +25,6 @@ class TweetsController < ApplicationController
         @tweet.save
       end
     end
-    binding.pry
     redirect to "/tweets/#{@tweet.id}"
   end
 
