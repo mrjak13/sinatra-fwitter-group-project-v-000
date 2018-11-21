@@ -28,7 +28,6 @@ class UsersController < ApplicationController
     elsif @user
       session[:user_id] = @user.id
     end
-    binding.pry
     redirect to '/tweets'
   end
 end
