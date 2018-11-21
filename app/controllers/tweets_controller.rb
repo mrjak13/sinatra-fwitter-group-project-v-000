@@ -6,6 +6,7 @@ class TweetsController < ApplicationController
       erb :'/tweets/index'
     else
       redirect to '/login'
+    end
   end
 
   get '/tweets/new' do
